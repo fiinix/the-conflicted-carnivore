@@ -1,0 +1,40 @@
+q,
+blockquote {
+    quotes: "“" "”" "‘" "’";
+}
+
+blockquote {
+
+    font-size: em(20);
+    line-height: number(24,20);
+
+    @include mq($breakpoint-lap) {
+
+        font-size: em(24);
+        line-height: number(30,24);
+
+    }
+
+}
+
+blockquote p {
+
+    position: relative;
+}
+
+q:before,
+blockquote p:first-child:before {
+    content: open-quote;
+}
+
+q:after,
+blockquote p:last-of-type:after {
+    content: close-quote;
+}
+
+blockquote p:first-child:before {
+
+    position: absolute;
+    left: -0.5rem;
+
+}

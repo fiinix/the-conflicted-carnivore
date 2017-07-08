@@ -1,0 +1,64 @@
+/* ==========================================================================
+
+
+   Settings
+
+
+   ========================================================================== */
+
+
+
+$pale-goldenrod: #F6F2DA;
+$cornflower-blue: #850400;
+
+
+
+$primary-color: $pale-goldenrod;
+$secondary-color: $cornflower-blue;
+$link-color: darken($cornflower-blue, 20);
+
+
+$black: #013220; /* protected variables */
+$white: $pale-goldenrod; /* protected variables */
+
+
+
+$font-weight: 400;
+$font-size: 20;
+$font-leading: 32;
+$font-family: 'Bellefair', Georgia, serif;
+
+
+
+$font-line-length: 66;
+
+
+//font-family: 'Homemade Apple', cursive;
+//font-family: 'Meddon', cursive;
+
+$heading-weight: 400;
+$heading-family: 'Abril Fatface', cursive;
+$heading-alpha: (
+	size:		48,
+	leading:	48
+);
+$heading-beta: (
+	size:		30,
+	leading:	32
+);
+$heading-gamma: (
+	size:		24,
+	leading:	30
+);
+
+
+
+/**
+ * $font-size need to be set for this to work properly.
+ */
+$breakpoint-wrist: 321; 
+$breakpoint-palm: 481;
+$breakpoint-lap: 641;
+$breakpoint-desk: 1025;
+$breakpoint-wall: 1201;
+$breakpoint-mall: 1601;

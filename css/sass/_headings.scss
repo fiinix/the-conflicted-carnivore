@@ -1,0 +1,58 @@
+/* ==========================================================================
+
+
+   Headings
+
+
+   ========================================================================== */
+
+
+
+h1, h2, h3,
+.heading {
+
+	font-family: $heading-family;
+	font-weight: $heading-weight;
+	letter-spacing: .015em;
+	
+}
+
+h1, .size--xxl {
+
+	font-size: em(30);
+	line-height: number(32,30);
+
+	@include mq($breakpoint-lap) {
+
+		font-size: em(48);
+		line-height: number(48,48);
+
+	}
+
+}
+
+h2, .size--xl {
+
+	font-size: em(24);
+	line-height: number(30,24);
+
+	@include mq($breakpoint-lap) {
+
+		font-size: em(30);
+		line-height: number(32,30);
+
+	}
+}
+
+h3, .size--l {
+
+	font-size: em(20);
+	line-height: number(24,20);
+
+	@include mq($breakpoint-lap) {
+
+		font-size: em(24);
+		line-height: number(30,24);
+
+	}
+}

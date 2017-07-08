@@ -1,0 +1,25 @@
+{
+  "name": "the-conflicted-carnivore",
+  "version": "1.0.0",
+  "description": "Package.json for building Sass",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node-sass --include-path scss css/style.scss   css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiinix/the-conflicted-carnivore.git"
+  },
+  "author": "Carlos Eriksson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fiinix/the-conflicted-carnivore/issues"
+  },
+  "homepage": "https://github.com/fiinix/the-conflicted-carnivore#readme"
+}

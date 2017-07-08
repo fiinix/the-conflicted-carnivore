@@ -1,0 +1,58 @@
+/* ==========================================================================
+
+
+   Links
+
+
+   ========================================================================== */
+
+
+
+a {
+
+	//display: inline-block;
+
+	text-decoration: none;
+	color: $link-color;
+
+	background-image: linear-gradient($secondary-color 100%, $secondary-color 100%);
+	background-size: 0.2em 0.2em;
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+
+	transition: all 150ms ease-in 0ms;
+
+	&:visited {
+
+		// color: gray;
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-size: 0.6em 0.6em;
+
+		// border-bottom: 1px solid $secondary-color;
+		//background-color: $secondary-color;
+		// color: $primary-color;
+
+	}
+
+}
+
+.splash-island--reverse a,
+.island a {
+
+	color: inherit;
+
+}
+
+.clear-before:before {
+
+	content: " ";
+	display: table;
+	clear: both;
+
+}

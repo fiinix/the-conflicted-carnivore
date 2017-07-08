@@ -1,0 +1,64 @@
+p {
+
+	-ms-word-break: normal;
+	word-break: normal;
+	/* Non standard for webkit */
+	word-break: normal;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+
+	@include mq($breakpoint-lap) {
+
+		//text-indent: em($font-size);
+
+	}
+
+}
+
+.toc p {
+
+	text-indent: 0;
+	text-align: left;
+
+}
+
+.align-right {
+
+	text-align: right;
+
+}
+
+.float-right {
+
+	float: right;
+
+}
+
+.first-paragraph {
+	text-indent: 0;
+}
+
+.normal-paragraph {
+	text-align: left;
+	text-indent: 0;
+	margin-bottom: em($font-leading);
+}
+
+.first-line {
+	text-transform: uppercase;
+	font-size: em(18);
+	line-height: em(30,18);
+}
+
+.chapter-numbering,
+.author-tagline {
+
+	text-indent: 0;
+	margin: 0 0 em($font-leading/2) 0;
+
+}
+.chapter-numbering {
+	text-align: center;
+}

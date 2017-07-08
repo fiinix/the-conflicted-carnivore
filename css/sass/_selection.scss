@@ -1,0 +1,53 @@
+/* ==========================================================================
+
+
+   Selection
+
+
+   ========================================================================== */
+
+
+
+$primary-color:		#15001f !default;
+$secondary-color:	#e69d00 !default;
+$white:				#fff !default;
+
+
+
+::-moz-selection {
+
+	background: $primary-color;
+	text-shadow: none;
+	color: $white;
+
+}
+
+
+
+::selection {
+
+	background: $primary-color;
+	text-shadow: none;
+	color: $white;
+
+}
+
+
+
+.island ::-moz-selection {
+
+	background: $secondary-color;
+	text-shadow: none;
+	color: $primary-color;
+
+}
+
+
+
+.island ::selection {
+
+	background: $secondary-color;
+	text-shadow: none;
+	color: $primary-color;
+
+}

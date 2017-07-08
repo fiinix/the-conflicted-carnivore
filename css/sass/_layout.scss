@@ -1,0 +1,163 @@
+/* ==========================================================================
+
+
+   Layout
+
+
+   ========================================================================== */
+
+
+
+html {
+	
+	font-size: percentage($font-size/16);
+
+}
+
+
+
+html,
+body {
+
+	width: 100%;
+	height: 100%;
+
+}
+
+
+
+body {
+
+	font-weight: $font-weight;
+	font-family: $font-family;
+	font-size: 0.9em;
+	line-height: 1.4;
+	background: $white;
+	color: $black;
+	overflow-x: hidden;
+
+	@include mq($breakpoint-lap) {
+
+		font-size: 1em;
+		line-height: #{number($font-leading)};
+
+	}
+
+}
+
+
+
+.viewport {
+
+	margin-top: 0;
+
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	//margin: 0 auto;
+
+}
+
+
+
+.island {
+
+	background: $primary-color;
+	color: $white;
+
+}
+
+
+
+.splash-island {
+
+	position: relative;
+
+	background-image: url(../img/noise.png);
+
+	&:after {
+
+		content:" ";
+		display:block;
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		height:37px;
+		background:	url(../img/s19.png) repeat-x bottom left,
+		url(../img/s17.png) repeat-x bottom left,
+		url(../img/s11.png) repeat-x bottom left,
+		url(../img/s7.png) repeat-x bottom left,
+		url(../img/s3.png) repeat-x bottom left transparent;
+
+	}
+
+}
+
+
+
+.splash-island--reverse {
+
+	background-color: $primary-color;
+	color: $white;
+
+	&:after {
+
+		background:	url(../img/s19-w.png) repeat-x bottom left,
+		url(../img/s17-w.png) repeat-x bottom left,
+		url(../img/s11-w.png) repeat-x bottom left,
+		url(../img/s7-w.png) repeat-x bottom left,
+		url(../img/s3-w.png) repeat-x bottom left transparent;
+
+	}
+
+}
+
+
+
+.container {
+
+	position: relative;
+	width:100%;
+	//display: flex;
+	//justify-content: center;
+	//align-items: center;
+
+	padding: em($font-leading) em($font-leading /3);
+
+	@include mq($breakpoint-wrist) {
+
+		padding: em($font-leading) em($font-leading /2);
+
+	}
+
+	@include mq($breakpoint-lap) {
+
+		padding: em($font-leading);
+
+	}
+
+	@include mq($breakpoint-desk) {
+
+		padding: em($font-leading *2);
+
+	}
+
+}
+
+
+
+.row {
+
+	width: 100%;
+	max-width: em(($font-line-length/$font-size)*180);
+
+	@include mq($breakpoint-desk) {
+
+		margin: em($font-leading) auto em($font-leading) 10%;
+
+	};
+
+}

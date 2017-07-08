@@ -1,0 +1,45 @@
+/* ==========================================================================
+
+
+   Basil
+
+
+   ========================================================================== */
+$basil-max-delay:			1000;
+$basil-increment-by:		100;
+
+
+.basil {
+
+	opacity: 0;
+	transform: translateY(-1em);
+
+	transition-property: all;
+	transition-duration: 600ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+
+	&.is-visible {
+
+		opacity: 1;
+		transform: translate(0);
+
+	}
+
+}
+
+
+// Default origin is ´top´
+[data-basil-origin="top"] { transform: translateY(-1em); }
+[data-basil-origin="bottom"] { transform: translateY(1em); }
+
+[data-basil-origin="left"] { transform: translateX(-1em); }
+[data-basil-origin="right"] { transform: translateX(1em); }
+
+
+// Default delay is ´0ms´
+@for $i from 1 through ($basil-max-delay/$basil-increment-by) {
+
+	[data-basil-delay="#{$i * $basil-increment-by}"] { transition-delay: #{$i * $basil-increment-by}ms; }
+
+}

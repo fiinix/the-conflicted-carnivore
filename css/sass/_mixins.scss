@@ -1,0 +1,35 @@
+/* ==========================================================================
+
+
+   Mixins
+
+
+   ========================================================================== */
+
+
+
+/* Media-queries
+   ========================================================================== */
+@mixin mq($point, $IE9: false, $query1: min, $query2: width) {
+
+    // 481/20 * 16 
+
+    // 30.06
+
+    // $point / $font-size +em;
+
+    @if $IE9 == true{
+        .lt-ie9 & {
+            @content;
+        }
+        @media screen and (#{$query1}-#{$query2}: $point / $font-size +em) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (#{$query1}-#{$query2}: $point / $font-size +em) {
+            @content;
+        }
+    }
+}
